@@ -8,5 +8,5 @@ class  Restaurant(AuditFields):
     image        = models.ImageField('IMAGE', upload_to='pictures/' )
 
     
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title
