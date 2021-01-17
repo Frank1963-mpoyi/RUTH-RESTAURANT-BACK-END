@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} RUTH {% endblock title %}
+
+
+{% block content %}
+
+<!-- OUR HISTORY  -->
+
+<div class="container mt-5">
+    <h2 class="text-center pb-3">ABOUT US</h2>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " >
+        
+            <h5 > Read My History</h5>
+            <p>
+                Chef Ruth grew up in Republic Democratic of Congo and first realised
+                her passion for cooking while helping her mother and cousin prepre
+                family recipes that had been passed down for generations.
+
+                her eduction started in her mother's kitchen, expended into kitchen
+                and culinary schools in the South Africa and still continues every day
+                in Restaurant and Hotels , Barista Boys, CTICC, Table Bay Hotel,
+                and The President Hotel.
+            </p>
+
+       
+            <p>
+                We specializes with events cater in cape town. whether its a birthday
+                party, family gatherings, a private celebration , elaborate wedding or
+                any occasion that you like us to assist with
+            </p>
+
+            <p  >
+                Chef Ruth can't wait to share his fresh , vibrant flavors with you at your
+                next party, family gathering or any other special event
+            </p>
+        
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6  ">
+            <img src="{% static 'blog/images/foodcover.jpg' %}" style="width: 100%; height: auto;" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 9. ========CARD============= -->
+
+<div class="container-fluid padding p-5">
+    <h2 class="text-center">MEET OUR CHEFS</h2>
+    <div class="row padding  ">
+        <div class="col-md-4">
+            <div class="card mb-2">
+                <img src="{% static 'blog/images/cover.jpg' %}" alt="" class="card-img-top ">
+                <!-- body inside the card -->
+                <div class="card-body">
+                    <h5 class="card-title text-center">Chef Siki</h5>
+                    <p class="card-text text-center text-center">HOT KITCHEN </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-2">
+            <div class="card">
+                <img src="{% static 'blog/images/cover.jpg' %}" alt="" class="card-img-top">
+                <!-- body inside the card -->
+                <div class="card-body">
+                    <h5 class="card-title text-center">Chef Ruth</h5>
+                    <p class="card-text text-center">OWNER & MANAGER</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-2">
+                <img src="{% static 'blog/images/cover.jpg' %}" alt="" class="card-img-top">
+                <!-- body inside the card -->
+                <div class="card-body">
+                    <h5 class="card-title text-center">Chef Flora</h5>
+                    <p class="card-text text-center">PASTRY KITCHEN</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- About Us -->
+<section id="about" class="">
+    <div>
+        <h2 class="text-center "> OUR MENU</h2>
+    </div>
+    <div class="about-center">
+        <!-- start of article -->
+        <article class="about">
+            <div class="about-icon">
+                <i class="fas fa-mug-hot"></i>
+            </div>
+
+            <div class="about-text">
+                <p class="about-subtitle">Drinks</p>
+                <p class="about-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, officiis!
+                </p>
+            </div>
+        </article>
+        <!-- end of article -->
+
+
+        <!-- start of article -->
+        <article class="about">
+            <div class="about-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+
+            <div class="about-text">
+                <p class="about-subtitle">Healthy Food</p>
+                <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, voluptate.
+                </p>
+            </div>
+        </article>
+        <!-- end of article -->
+
+        <!-- start of article -->
+        <article class="about">
+            <div class="about-icon">
+                <i class="fas fa-mortar-pestle"></i>
+            </div>
+
+            <div class="about-text">
+                <p class="about-subtitle">Organic Food</p>
+                <p class="about-info">
+                    chichen &nbsp; &nbsp; &nbsp; R 20 <br>
+                    rice R 40
+                </p>
+            </div>
+        </article>
+        <!-- end of article -->
+
+        <!-- start of article -->
+        <article class="about">
+            <div class="about-icon">
+                <i class="fas fa-drumstick-bite"></i>
+            </div>
+
+            <div class="about-text">
+                <p class="about-subtitle">White Meat</p>
+                <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, corrupti.
+                </p>
+            </div>
+        </article>
+        <!-- end of article -->
+
+        <!-- start of article -->
+        <article class="about">
+            <div class="about-icon">
+                <i class="fas fa-fish"></i>
+            </div>
+
+            <div class="about-text">
+                <p class="about-subtitle">Sea Food</p>
+                <p class="about-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, amet?
+                </p>
+            </div>
+        </article>
+        <!-- end of article -->
+
+        <!-- start of article -->
+        <article class="about">
+            <div class="about-icon">
+                <i class="fas fa-pepper-hot"></i>
+            </div>
+
+            <div class="about-text">
+                <p class="about-subtitle">Hot & spicy</p>
+                <p class="about-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+                    reprehenderit.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- End of About Us  -->
+
+
+<!-- Social Icons -->
+<section id="social-icons">
+    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube youtube"></i></a>
+</section>
+<!-- End of Social Icon -->
+
+
+<!-- Gallery -->
+<section id="gallery">
+    <div>
+        <h2 class="text-center">Main Cuisines</h2>
+    </div>
+    <div id="gallery-centre">
+        {% for item in items %}
+        <article class="gallery-item  {% if item.bool_deleted  %} d-none d-sm-block {% endif %} ">
+                <img class="" src="{{ item.image.url }}" class= "img-fluid" alt="">
+        </article>
+        {% endfor %}
+    
+    </div>
+</section>
+<!-- End gallery -->
+
+
+<!-- Footer section -->
+<footer class="footer">
+    <div class="section-center">
+        <p class="footer-text">
+            &copy;<span>Food For Health</span>
+        </p>
+    </div>
+</footer>
+<!-- End of footer -->
+
+{% endblock %}

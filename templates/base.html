@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="magnific/magnific-popup.css"> -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Local Css -->
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}"> 
+    
+    {% block based_head %} {% endblock %}
+    
+    <title>{% block title %} Ruth {% endblock title %} | RUTH RESTAURANT </title>
+
+    
+</head>
+
+<body>
+
+    {% include 'navbar.html' with brand_name='RUTH CATERING' %}
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    
+    
+
+    <!-- Bootstrap Js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    
+    <script>
+        $(window).scroll(function(){
+
+        $('div').toggleClass('scrolled', $(this).scrollTop() > 450);
+        });
+    </script>
+
+</body>
+
+</html>

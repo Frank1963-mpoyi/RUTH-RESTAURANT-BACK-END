@@ -63,15 +63,9 @@ SECURE_FRAME_DENY               = True
 
 STATICFILES_STORAGE             = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':     config('DB_NAME'),
-        'USER':     config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST':     config('DB_HOST') 
-    }
-}
+
+DATABASES['default'] =  dj_database_url.config()
+
 
 
 prod_db  =  dj_database_url.config(conn_max_age=500)
