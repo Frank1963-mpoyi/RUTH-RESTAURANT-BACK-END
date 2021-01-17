@@ -15,7 +15,7 @@
 
 
 .navbar.scrolled {
-    background: #009688 !important;
+    background: #203647 !important;
 
 }
 /* 
@@ -38,14 +38,14 @@
 }
 
 .navbar ul.nav li a {
-    color: #fff;
+    color: #EEFBFB;
     font-size: 1em;
     font-weight: 500;
 }
 
 .navbar ul.nav li.active a
 .navbar ul.nav li:hover {
-    color: #000;
+    color: #EEFBFB;;
 }
 
 .hero-buttton  {
@@ -55,16 +55,16 @@
     padding: 13px 20px;
     border-radius: 200px;
     font-weight: bold;
-    background: #009688;
-    color: #fff;
+    background: #4DA8DA;
+    color: #EEFBFB;
     cursor: pointer;
-    border: 2px solid #009688;
+    border: 2px solid #4DA8DA;
     margin-top: 10px;
 }
 
 .hero-buttton:hover {
-    background: #fff;
-    color: #009688;
+    background: #EEFBFB;
+    color:#4DA8DA;
     border: none;
 }
 
@@ -198,6 +198,11 @@
 
 }
 
+.text-center {
+    color: #4DA8DA;
+}
+
+
 .about{
     margin: 30px 0; 
     display: flex; 
@@ -205,13 +210,13 @@
 
 .about-icon .fas {
     font-size: 50px;
-    color: #009688;
+    color: #007CC7;
     margin-right: 20px;
 }
 
 .about-subtitle {
     text-transform: capitalize;
-    color: #009688;
+    color: #007CC7;
     /* font-size: 20px; */
 }
 
@@ -224,7 +229,7 @@
 .about-subtitle:hover{
     transition: transform 2s ease, color 2s ease;
     transform: translateY(-10px);
-    color:#009688;
+    color:#203647;
     cursor: pointer;
 }
 
@@ -288,7 +293,7 @@
 /* ====Social media====== */
 #social-icons {
     height: 150px;
-    background: #fff;
+    background: #EEFBFB;
     text-align: center;
     padding: 50px 0 50px 0;
 }
@@ -322,213 +327,92 @@
     color: red;
 }
 
+.whatsapp {
+    color: lightgreen;
+}
+
 /* =========End social media======= */
 
 
-/* =======Numbers===== */
-#numbers{
-    display: flex;
-    justify-content: space-around;
-}
-.number img {
-    text-align: center;
-    /* background: linear-gradient(rgba(0,0,0,0.3),
-    rgba(0,0,0,0.4)), url("./images/cover2.jpg") center/cover  no-repeat ; */
-    padding: 60px 0;
-    color: #fff;
-}
-.number p{
-    font-size: 30px;
-    font-weight: bold;
+
+/* ==============Footer=============== */
+#footer{
+    background:#203647 ;
+    color: #EEFBFB;
 }
 
-.number:hover{
-    color:#009688;
+.footer-img{
+    width: 100%;
 }
 
-.number .fas{
-    font-size: 60px;
-    margin: 20px 0;
-}
-
-.number h3{
-    text-transform: uppercase;
-}
-
-@media screen and (min-width: 576px){
-    #numbers{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-@media screen and (min-width: 992px){
-    #numbers{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-}
-/* ====end of number */
-
-/* =========Cards======= */
-
-#food{
+.footer-box{
     padding: 20px;
 }
 
-.food-container {
-    max-width: 90vw;
-    margin: 0 auto;
+.footer-box img {
+    width: 120px;
+    margin-bottom: 20px;
 }
 
-.food-card {
-    position: relative;
-    background: linear-gradient(rgba( #009688),rgba( #009688));
-    margin: 20px 0;
-    color: #000;
-    overflow: hidden;
-    padding: 3px;
-    border-radius: 16px;
-    border: 1px solid #009688;
-    box-shadow: 2px 3px 1px 1px  #009688;
-}
-#food img {
-    width: 100%;
-    min-height: 100%;
-    display: block;
-    transition: transform 4s;
-}
-
-.img-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.footer-box .fa{
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
     text-align: center;
-    opacity: 0;
-    transition: opacity 4s;
+    padding-top: 7px;
+    border-radius: 2px;
+    background:   #4DA8DA;
 }
-.img-footer{
+
+.footer-box .form-control{
+    box-shadow: none;
+    border: none;
+    border-radius: 25px;
+    margin-top: 25px;
+    max-width: 250px;
+
+}
+
+.footer-box .btn-primary{
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0 ;
+    margin-top: 30px;
+    background:  #4DA8DA;
+
+}
+
+hr{
+    background: #EEFBFB;
+}
+
+.copyright {
+    margin-bottom: 0;
+    padding-bottom: 20px ;
+    text-align: center;
+
+}
+
+
+
+.gallery-list {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 10px;
-    font-size: 20px;
-    opacity: 0;
-    color: #000;
-    transition: opacity 4s;
-}
-.img-text h1{
-    font-size: 30px;
-    margin-bottom: 10px;
-
-}
-.food-card:hover img{
-    opacity: 0.4;
-    transform: scale(1.3);
-
-}
-.food-card:hover .img-text,
-.food-card:hover .img-footer{
-    opacity: 1;
-}
-
-.food-btn{
-    display: inline-block;
-    background: #000;
-    text-decoration: none;
-    text-transform: capitalize;
-    padding: 12px 32px;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 180px;
-    cursor: pointer;
-    margin-top: 16px;
-    transition: all 0.3s ease-in-out;
-    font-size: 18px;
-    outline: none;
-
-}
-.food-btn:hover {
-    color: #009688;
-    background: #fff;
-    border: #000;
-    outline: none;
-
-}
-.fas{
-    font-size: 30px;
-}
-
-@media screen and (min-width:576px){
-    .food-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 16px;
-    }
-}
-/* ==============End Cards======== */
-
-/* ========Gallery section====== */
-#gallery{
-    padding: 40px;
-    background:#fff ;
-}
-.gallery-item{
-    background: linear-gradient(rgba( #009688)rgb( #009688))
-    
-}
-
-.gallery-item img{
-    display: block;
-    width: 100%;
-    height: 200px;
-    opacity: 1;
-    transition: opacity 2s ease;
-}
-.gallery-item img:hover{
-    opacity: 0.5;
-}
-
-@media screen and (min-width:576px){
-#gallery-centre{
-    display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-    grid-template-columns: repeat(4, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    background: #EEFBFB; 
     
     
-}
+    /* width: 100%; */
 
 }
 
-@media screen and(min-width: 992px){
-#gallery-centre{
-    grid-template-columns: repeat(4, 1fr);
+.galery-items img {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 15px;
 }
-}
-
-
-/* ==========End of Gallery section */
-
-/* =======footer==== */
-.footer{
-    background: #009688;
-    text-align: center;
-}
-
-.footer-text{
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-/* class="img-fluid img-thumbnail" for bootstrap */
-
-
-

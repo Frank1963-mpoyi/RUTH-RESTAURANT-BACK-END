@@ -10,9 +10,6 @@ ALLOWED_HOSTS       = ['*']
 
 
 
-
-
-
 MIDDLEWARE += [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
@@ -49,24 +46,28 @@ MEDIA_ROOT      = os.path.join(BASE_PATH, f'{APP_STATIC}/media')
 
 
 
-CORPS_REPLACE_HTTPS_REFERER     = True
-HOST_SCHEME                     = "https://"
-SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT             = True
-SESSION_COOKIE_SECURE           = True
-CSRF_COOKIE_SECURE              = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
-SECURE_HSTS_SECONDS             = 1000000
-SECURE_FRAME_DENY               = True
+
+# Honor the 'X-Forwarded-Proto' header fro request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 
-STATICFILES_STORAGE             = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE     = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-DATABASES['default'] =  dj_database_url.config()
 
+#DATABASES['default'] =  dj_database_url.config()
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':     config('DB_NAME'),
+        'USER':     config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST':     config('DB_HOST'),
+        'PORT':      config('DB_PORT') 
+    }
 
+}
 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)

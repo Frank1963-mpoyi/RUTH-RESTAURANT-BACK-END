@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 " >
         
-            <h5 > Read My History</h5>
+            <h5 style="color: #203647;"> Read My History</h5>
             <p>
                 Chef Ruth grew up in Republic Democratic of Congo and first realised
                 her passion for cooking while helping her mother and cousin prepre
@@ -189,8 +189,10 @@
 
 <!-- Social Icons -->
 <section id="social-icons">
+    <h3 class="text-center">FIND US ON SOCIAL MEDIA</h3>
     <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook facebook"></i></a>
     <a href="#"><i class="fab fa-twitter twitter"></i></a>
+    <a href="#"><i class="fab fa-whatsapp whatsapp"></i></a>
     <a href="#"><i class="fab fa-instagram instagram"></i></a>
     <a href="#"><i class="fab fa-youtube youtube"></i></a>
 </section>
@@ -198,30 +200,61 @@
 
 
 <!-- Gallery -->
-<section id="gallery">
-    <div>
-        <h2 class="text-center">Main Cuisines</h2>
+
+<div class="gallery-list">
+    {% for item in items %}
+    <div class="galery-items">
+        <img class="" src="{{ item.image.url }}" class= "img-fluid" alt="">
     </div>
-    <div id="gallery-centre">
-        {% for item in items %}
-        <article class="gallery-item  {% if item.bool_deleted  %} d-none d-sm-block {% endif %} ">
-                <img class="" src="{{ item.image.url }}" class= "img-fluid" alt="">
-        </article>
-        {% endfor %}
-    
+    {% endfor %}
+</div>
+
+<!-- end -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- !--======================= SECTION FOOTER============================  --> 
+
+<section id="footer">
+    <img src="" alt="wave image must be place here" class="footer-img">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-box">
+                <img src="image/food8.jpg" alt="logo image must be here">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, culpa.</p>
+            </div>
+
+            <div class="col-md-4 footer-box">
+                
+                <p><b>CONTACT US</b></p>
+                <p> <i class="fa fa-map-marker"></i>28 Loubser street, Bracknfell  </p>
+                <p><i class="fa fa-phone"></i>+27 0781114041 </p>
+                <p><i class="fa fa-envelope-o"></i>frankmpoyi63@gmail.com</p>
+            </div>
+
+            <div class="col-md-4 footer-box">             
+                <p><b>SUBSCRIBE NEWSLETTER</b></p>
+                <input type="email" class="form-control" placeholder="Your Email">
+                <button type="button" class="btn btn-primary">Subscribe</button>
+               
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">website crafted by Frank Mpoyi Tshibuyi</p>
     </div>
+
 </section>
-<!-- End gallery -->
 
 
-<!-- Footer section -->
-<footer class="footer">
-    <div class="section-center">
-        <p class="footer-text">
-            &copy;<span>Food For Health</span>
-        </p>
-    </div>
-</footer>
-<!-- End of footer -->
+
+
 
 {% endblock %}
