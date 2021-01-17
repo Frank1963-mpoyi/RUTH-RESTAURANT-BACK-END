@@ -1,7 +1,9 @@
-
-import configparser
+import      configparser
 import      dj_database_url
-from .base import *
+from        .base               import *
+
+
+
 
 
 DEBUG = True
@@ -21,36 +23,36 @@ DEBUG = True
 
 
 
-# CONFIG_DIR = os.path.join(BASE_DIR, 'config/')
+CONFIG_DIR = os.path.join(BASE_DIR, 'config/')
 
-# parser = configparser.ConfigParser()
-# parser.read_file(open(os.path.join(CONFIG_DIR, 'app.ini')))
+parser = configparser.ConfigParser()
+parser.read_file(open(os.path.join(CONFIG_DIR, 'app.ini')))
 
-#DATABASES = {}
+DATABASES = {}
 
 
 #Done with postgresql 
-# DATABASES = {
-#     'default': {
-#         'ENGINE'    : 'django.db.backends.postgresql_psycopg2',
-#         'NAME'      : parser.get('capetowndmc', 'name'),
-#         'USER'      : parser.get('capetowndmc', 'user'),
-#         'PASSWORD'  : parser.get('capetowndmc', 'password'),
-#         'HOST'      : parser.get('capetowndmc', 'host') or '127.0.0.1',
-#         'PORT'      : parser.getint('capetowndmc', 'port') or '5432',
+DATABASES = {
+    'default': {
+        'ENGINE'    : 'django.db.backends.postgresql_psycopg2',
+        'NAME'      : parser.get('Ruthrestaurant', 'name'),
+        'USER'      : parser.get('Ruthrestaurant', 'user'),
+        'PASSWORD'  : parser.get('Ruthrestaurant', 'password'),
+        'HOST'      : parser.get('Ruthrestaurant', 'host') or '127.0.0.1',
+        'PORT'      : parser.getint('Ruthrestaurant', 'port') or '5432',
 
-#     }
-# }
+    }
+}
 
 
 
 # Tried with Sqlite3 database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 
