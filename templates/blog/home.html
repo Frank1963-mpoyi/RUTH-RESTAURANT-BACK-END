@@ -5,6 +5,98 @@
 
 
 {% block content %}
+<style>
+    
+
+.gallery-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    background: #EEFBFB; 
+    
+    
+    /* width: 100%; */
+
+}
+
+.galery-items img {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+#footer{
+    background:#203647 ;
+    color: #EEFBFB;
+}
+
+.footer-img{
+    width: 100%;
+}
+
+.footer-box{
+    padding: 20px;
+}
+
+.footer-box img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-box .fa{
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+    background:   #4DA8DA;
+}
+
+.footer-box .form-control{
+    box-shadow: none;
+    border: none;
+    border-radius: 25px;
+    margin-top: 25px;
+    max-width: 250px;
+
+}
+
+.footer-box .btn-primary{
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0 ;
+    margin-top: 30px;
+    background:  #4DA8DA;
+
+}
+
+hr{
+    background: #EEFBFB;
+}
+
+.copyright {
+    margin-bottom: 0;
+    padding-bottom: 20px ;
+    text-align: center;
+
+}
+
+
+.navbar.scrolled {
+    background: #203647 !important;
+
+}
+
+
+</style>
+
+
 
 <!-- OUR HISTORY  -->
 
@@ -201,7 +293,7 @@
 
 <!-- Gallery -->
 
-<div class="gallery-list">
+<div class="gallery-list mt-5">
     {% for item in items %}
     <div class="galery-items">
         <img class="" src="{{ item.image.url }}" class= "img-fluid" alt="">
@@ -252,8 +344,6 @@
     </div>
 
 </section>
-
-
 
 
 

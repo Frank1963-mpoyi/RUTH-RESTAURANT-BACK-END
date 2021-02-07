@@ -6,6 +6,8 @@
     font-family: 'Baloo Chettan 2', cursive;
 }
 
+
+
 .navbar{
     position: fixed;
     top: 0;
@@ -286,6 +288,8 @@
     .menu {
         background: #009688;
     }
+
+  
 }
 
 /*============End of menu section */
